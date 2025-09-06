@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
         // console.log("Upload result:", uploadResult);
 
         const buffer = Buffer.from(await image.arrayBuffer());
-        const poses = await generatePosesFromImageBuffer(buffer, image.type, 5);
+        const poses = await generatePosesFromImageBuffer(buffer, image.type, 12);
 
         // Stream the poses array after generation
         const posesData =
